@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Kraviansky trener</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Daniel<span class="highlight-name">Kraviansky</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Domov</a></li>
+                    <li><a href="#article1">O mne</a></li>
+                    <li><a href="#article2">Služby</a></li>
+                    <li><a href="#article3">Kontakt</a></li>
+                    <li><a href="#cennik">Cenník</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Photo Slider -->
+    <div id="slider-container" class="slider-container">
+        <div class="slider">
+            <img src="photos/voda1.jpg" alt="plavanie">
+            <img src="photos/IMG_2881.JPG" alt="bike" class="adjust-image">
+            <img src="photos/IMG_2889.JPG" alt="ciel" class="adjust-image2">
+        </div>
+        <button class="slider-btn prev-btn">❮</button>
+        <button class="slider-btn next-btn">❯</button>
+    </div>
+
+    <main id="router-view">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Čo hovoria moji klienti</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Daniel mi pomohol zlepšiť moju techniku behu a dosiahnuť osobné rekordy. Odporúčam ho každému, kto chce posunúť svoje bežecké limity."</p>
+                    <p class="author">- Ján Novák</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Vďaka Danielovi som zvládol svoj prvý triatlon. Jeho tréningy sú komplexné a efektívne."</p>
+                    <p class="author">- Anna Kováčová</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Daniel Kraviansky - Osobný tréner</p>
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Domov</a></li>
+                    <li><a href="#article1">O mne</a></li>
+                    <li><a href="#article2">Služby</a></li>
+                    <li><a href="#article3">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Templates -->
+    <template id="template-welcome">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Niečo o mne</h2>
+                    <p>Volám sa Daniel Kraviansky a som reprezentant Slovenska v triatlone. Pôsobím v Košiciach a trénujem aj online. Ak chceš zlepšiť svoj beh, plávanie alebo bežkovanie, som tu pre teba. Pomôžem ti dosiahnuť tvoje osobné ciele a nájisť v tebe čo možno netušíš že v sebe máš.</p>
+                    <a href="#article1" class="btn_main">Viac informácií</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="training-specializations">
+            <div class="container">
+                <h2>Moje špecializácie tréningu</h2>
+                <div class="specialization-grid">
+                    <a href="#triatlon_info" class="specialization-block btn_training">
+                        <img src="photos/merged.jpg" alt="triatlon">
+                        <h3 class="training_name">Triatlon</h3>
+                    </a>
+
+                    <a href="#beh_info" class="specialization-block btn_training">
+                        <img src="photos/beh_M.JPG" alt="Bežecký tréning">
+                        <h3>Beh</h3>
+                    </a>
+
+                    <a href="#plavanie_info" class="specialization-block btn_training">
+                        <img src="photos/plavec.jpg" alt="Plavecký tréning">
+                        <h3>Plávanie</h3>
+                    </a>
+
+                    <a href="#bezky_info" class="specialization-block btn_training">
+                        <img src="photos/bezky_2.jpg" alt="Bežkársky tréning">
+                        <h3>Bežkovanie</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Kontaktujte ma</h2>
+                <p>Máte otázky alebo potrebujete pomoc s výberom tréningového plánu? Neváhajte ma kontaktovať.</p>
+
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    <p>Telefón: +421 123 456 789</p>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="template-article1">
+       <section id="o_mne" class="about-me">
+            <div class="container">
+                <h1>O mne </h1>
+                <div class="about-me-content">
+                    <div class="about-me-text">
+                        <p>Volám sa Daniel Kraviansky a som reprezentant Slovenska v triatlone a tréner s dlhoročnými skúsenosťami a medzinárodnými úspechmi. Reprezentujem Slovensko na prestížnych podujatiach a neustále sa snažím posúvať svoje limity ďalej a ďalej, aby som bol inšpiráciou pre svojich zverencov že všetko sa dá len treba chcieť.</p>
+
+                        <div class="uspechy_container">
+                            <h4>Moje najväčšie úspechy:</h4>
+                            <ul>
+                                <li>5. miesto - MS(majstrovstvá sveta) v kros duatlone - Austrália(2024)</li>
+                                <li>12. miesto - MS v kros triatlone - Austrália(2024)</li>
+                                <li>10. miesto - ME(majstrovstvá Európy) v kros triatlone - Portugalsko(2024)</li>
+                                <li>6. miesto - ME v krost triatlone - Portugalsko(2023)</li>
+                                <li>Taktiež mám half Ironmana pod 4 hodiny</li>
+                                <li>Pacer na MMM s časmi pod 3 hodiny</li>
+                            </ul>
+                        </div>
+
+                        <p>Okrem triatlonu sa aktívne venujem behu, plávaniu a bežkovaniu. Tieto disciplíny sú neoddeliteľnou súčasťou mojej prípravy, a preto ti viem ponúknuť komplexný tréningový prístup.</p>
+
+                        <p>Môj cieľ je pomôcť ti dosiahnuť tvoje športové sny, či už ide o prekonanie osobných rekordov, zlepšenie kondície alebo len o radosť z pohybu. Pomôžem ti vytvoriť tréningový plán ktorź bude zodpovedať tvojim potrebám a cieľom.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="template-article2">
+        <section id="sluzby" class="services">
+            <div class="container">
+                <h2>Služby</h2>
+                <p>Obsah pre sekciu Služby.</p>
+            </div>
+        </section>
+    </template>
+
+    <template id="template-article3">
+        <section id="kontakt" class="contact">
+            <div class="container">
+                <h2>Kontakt</h2>
+                <p>Obsah pre sekciu Kontakt.</p>
+            </div>
+        </section>
+    </template>
+
+    <!-- Pricing Template -->
+    <template id="template-cennik">
+        <section class="pricing-section">
+            <div class="container">
+                <h2>Cenník tréningov</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Základný balík</h3>
+                        <div class="price">15€/hod</div>
+                        <ul class="features-list">
+                            <li>Individuálny tréning</li>
+                            <li>Analýza techniky</li>
+                            <li>Základné cvičenia</li>
+                            <li>Konzultácia cieľov</li>
+                        </ul>
+                        <a href="#contact" class="btn_main">Kontaktovať</a>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Mesačný balík</h3>
+                        <div class="price">80€/mesiac</div>
+                        <ul class="features-list">
+                            <li> idividuálne ale aj skupinové tréningy</li>
+                            <li>Tréningový plán</li>
+                            <li>Online ale aj F2F konzultácie</li>
+                        </ul>
+                        <a href="#contact" class="btn_main">Kontaktovať</a>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Príprava na preteky</h3>
+                        <div class="price">od 150€/mesiac</div>
+                        <ul class="features-list">
+                            <li>Kompletný tréningový plán</li>
+                            <li>Pravidelné konzultácie</li>
+                            <li>Nutričné poradenstvo</li>
+                            <li>Mentálna príprava</li>
+                        </ul>
+                        <a href="#contact" class="btn_main">Kontaktovať</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/routes.js"></script>
+    <script type="module" src="/js/photoslider.js"></script>
+</body>
+</html>

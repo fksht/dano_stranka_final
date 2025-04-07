@@ -54,6 +54,7 @@ header {
     background-color: #111;
     padding: 15px 0;
     color: white;
+    position: relative;
 }
 
 header .container {
@@ -64,6 +65,7 @@ header .container {
 
 header h1 {
     margin: 0;
+    font-size: 32px;
 }
 
 .highlight-name {
@@ -94,6 +96,100 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #ffce00;
+}
+
+.menu-toggle {
+    display: flex; /* always visible */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 999;
+}
+  
+.menu-toggle span {
+    background: white;
+    height: 3px;
+    margin-bottom: 1px;
+    width: 100%;
+    border-radius: 2px;
+}
+  
+/* Dropdown menu styles */
+#mobile-menu {
+    background-color: #222;
+    position:fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    padding: 10px 0;
+    z-index: 9999;
+    /*transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);*/
+}
+  
+#mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+  
+#mobile-menu li {
+    border-bottom: 1px solid #333;
+}
+  
+#mobile-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#mobile-menu li a:hover {
+    color: #ffce00;
+}
+  
+.hidden {
+    display: none;
+}
+
+#mobile-menu .close-button {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+#mobile-menu .close-button:hover{
+    color: #7e7c77;
+}
+
+#mobile-menu .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 0 10px;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+}
+  
+#mobile-menu .social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(1) invert(0); /* ikony budú biele na tmavom pozadí */
+    transition: transform 0.2s ease;
+}
+  
+#mobile-menu .social-icons a:hover img {
+    transform: scale(1.2);
 }
 
 /* Hero Section */
@@ -497,21 +593,29 @@ footer nav ul li a:hover {
     }
 
     header .container {
-        flex-direction: column;
+        /*flex-direction: column;*/
         text-align: center;
     }
 
     header h1 {
-        margin-bottom: 15px;
+        font-size: 28px;
     }
 
-    header nav ul {
+    /*header nav ul {
         margin-top: 10px;
         justify-content: center;
-    }
+    }*/
 
     header nav ul li {
         margin: 0 10px;
+    }
+
+    #mobile-menu {
+        width: 200px;
+    }
+
+    #mobile-menu ul {
+        font-size: 18px;
     }
 
     .hero .container {
@@ -575,5 +679,19 @@ footer nav ul li a:hover {
     .slider img.adjust-image2 {
         object-position: 50% 0%;
         transform: translateY(-15%);
+    }
+}
+
+@media(max-width: 500px){
+    #mobile-menu {
+        width: 130px;
+    }
+
+    #mobile-menu ul {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
     }
 }

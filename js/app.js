@@ -39,4 +39,33 @@ class ParamHashRouter {
 // Initialize the router
 document.addEventListener('DOMContentLoaded', () => {
     const router = new ParamHashRouter(routes, 'welcome'); // Start with 'welcome' route
+
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-menu');
+
+    if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+
+    if (closeBtn && menu) {
+        closeBtn.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+    }
+
+    document.addEventListener('click', function(event) {
+        // Skontroluj, či menu a toggle existujú
+        if (menu && toggle) {
+            const clickedOutside = !menu.classList.contains('hidden') &&
+                                   !menu.contains(event.target) &&
+                                   !toggle.contains(event.target);
+
+            if (clickedOutside) {
+                menu.classList.add('hidden');
+            }
+        }
+    });
 });

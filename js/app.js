@@ -3,7 +3,9 @@
 import routes from './routes.js';
 
 function findComponentByPath(path, routes) {
-  return routes.find(r => r.path === path);
+  const repoName = "/dano_stranka_final"; // ZMEŇTE NA MENO REPO
+  const cleanPath = path.replace(repoName, ""); // Odstráni repo z cesty
+  return routes.find(r => r.path === cleanPath);
 }
 
 function router() {

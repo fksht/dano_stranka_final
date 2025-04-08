@@ -6,26 +6,13 @@
     <title>Daniel Kraviansky trener</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <base href="/">
 </head>
 <body>
     <header>
-        <!--<div class="container">
-            <h1>Daniel<span class="highlight-name">Kraviansky</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="#welcome">Domov</a></li>
-                    <li><a href="#article1">O mne</a></li>
-                    <li><a href="#article2">Služby</a></li>
-                    <li><a href="#article3">Kontakt</a></li>
-                    <li><a href="#cennik">Cenník</a></li>
-                </ul>
-            </nav>
-        </div>-->
-        
         <div class="container">
             <h1>Daniel<span class="highlight-name">Kraviansky</span></h1>
             <div class="menu-toggle" id="menu-toggle">
-                <!-- Hamburger ikona -->
                 <span></span>
                 <span></span>
                 <span></span>
@@ -34,11 +21,11 @@
             <nav id="mobile-menu" class="hidden">
                 <div class="close-button" id="close-menu">&times;</div>
                 <ul>
-                    <li><a href="#welcome">Domov</a></li>
-                    <li><a href="#article1">O mne</a></li>
-                    <li><a href="#article2">Služby</a></li>
-                    <li><a href="#article3">Kontakt</a></li>
-                    <li><a href="#cennik">Cenník</a></li>
+                    <li><a href="/">Domov</a></li>
+                    <li><a href="/o-mne">O mne</a></li>
+                    <li><a href="/sluzby">Služby</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/cennik">Cenník</a></li>
                 </ul>
         
                 <div class="social-media">
@@ -50,7 +37,6 @@
         </div>
     </header>
 
-    <!-- Photo Slider -->
     <div id="slider-container" class="slider-container">
         <div class="slider">
             <img src="photos/voda1.jpg" alt="plavanie">
@@ -65,32 +51,15 @@
         <!-- Content will be dynamically loaded here -->
     </main>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>Čo hovoria moji klienti</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p>"Daniel mi pomohol zlepšiť moju techniku behu a dosiahnuť osobné rekordy. Odporúčam ho každému, kto chce posunúť svoje bežecké limity."</p>
-                    <p class="author">- Ján Novák</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Vďaka Danielovi som zvládol svoj prvý triatlon. Jeho tréningy sú komplexné a efektívne."</p>
-                    <p class="author">- Anna Kováčová</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <p>© 2024 Daniel Kraviansky - Osobný tréner</p>
             <nav>
                 <ul>
-                    <li><a href="#welcome">Domov</a></li>
-                    <li><a href="#article1">O mne</a></li>
-                    <li><a href="#article2">Služby</a></li>
-                    <li><a href="#article3">Kontakt</a></li>
+                    <li><a href="/">Domov</a></li>
+                    <li><a href="/o-mne">O mne</a></li>
+                    <li><a href="/sluzby">Služby</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -103,7 +72,7 @@
                 <div class="hero-content">
                     <h2>Niečo o mne</h2>
                     <p>Volám sa Daniel Kraviansky a som reprezentant Slovenska v triatlone. Pôsobím v Košiciach a trénujem aj online. Ak chceš zlepšiť svoj beh, plávanie alebo bežkovanie, som tu pre teba. Pomôžem ti dosiahnuť tvoje osobné ciele a nájisť v tebe čo možno netušíš že v sebe máš.</p>
-                    <a href="#article1" class="btn_main">Viac informácií</a>
+                    <a href="/o-mne" class="btn_main">Viac informácií</a>
                 </div>
             </div>
         </section>
@@ -147,6 +116,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Čo hovoria moji klienti</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Daniel mi pomohol zlepšiť moju techniku behu a dosiahnuť osobné rekordy. Odporúčam ho každému, kto chce posunúť svoje bežecké limity."</p>
+                        <p class="author">- Ján Novák</p>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Vďaka Danielovi som zvládol svoj prvý triatlon. Jeho tréningy sú komplexné a efektívne."</p>
+                        <p class="author">- Anna Kováčová</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </template>
 
     <template id="template-article1">
@@ -179,10 +166,30 @@
     </template>
 
     <template id="template-article2">
-        <section id="sluzby" class="services">
+        <section class="training-specializations">
             <div class="container">
-                <h2>Služby</h2>
-                <p>Obsah pre sekciu Služby.</p>
+                <h2>Moje špecializácie tréningu</h2>
+                <div class="specialization-grid">
+                    <a href="#triatlon_info" class="specialization-block btn_training">
+                        <img src="photos/merged.jpg" alt="triatlon">
+                        <h3 class="training_name">Triatlon</h3>
+                    </a>
+
+                    <a href="#beh_info" class="specialization-block btn_training">
+                        <img src="photos/beh_M.JPG" alt="Bežecký tréning">
+                        <h3>Beh</h3>
+                    </a>
+
+                    <a href="#plavanie_info" class="specialization-block btn_training">
+                        <img src="photos/plavec.jpg" alt="Plavecký tréning">
+                        <h3>Plávanie</h3>
+                    </a>
+
+                    <a href="#bezky_info" class="specialization-block btn_training">
+                        <img src="photos/bezky_2.jpg" alt="Bežkársky tréning">
+                        <h3>Bežkovanie</h3>
+                    </a>
+                </div>
             </div>
         </section>
     </template>

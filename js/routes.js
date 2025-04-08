@@ -1,101 +1,42 @@
 const routes = [
   {
-    hash: "welcome",
+    path: "/",
     target: "router-view",
     getTemplate: (targetElm) => {
       document.getElementById(targetElm).innerHTML = document.getElementById("template-welcome").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'block';
-      }
+      document.getElementById('slider-container').style.display = 'block';
     }
   },
   {
-    hash: "article1",
+    path: "/o-mne",
     target: "router-view",
     getTemplate: (targetElm) => {
       document.getElementById(targetElm).innerHTML = document.getElementById("template-article1").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
+      document.getElementById('slider-container').style.display = 'none';
     }
   },
   {
-    hash: "article2",
+    path: "/sluzby",
     target: "router-view",
     getTemplate: (targetElm) => {
       document.getElementById(targetElm).innerHTML = document.getElementById("template-article2").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
+      document.getElementById('slider-container').style.display = 'none';
     }
   },
   {
-    hash: "article3",
+    path: "/kontakt",
     target: "router-view",
     getTemplate: (targetElm) => {
       document.getElementById(targetElm).innerHTML = document.getElementById("template-article3").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
+      document.getElementById('slider-container').style.display = 'none';
     }
   },
   {
-    hash: "triatlon_info",
-    target: "router-view",
-    getTemplate: (targetElm) => {
-      document.getElementById(targetElm).innerHTML = document.getElementById("template-triatlon").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
-    }
-  },
-  {
-    hash: "beh_info",
-    target: "router-view",
-    getTemplate: (targetElm) => {
-      document.getElementById(targetElm).innerHTML = document.getElementById("template-beh").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
-    }
-  },
-  {
-    hash: "plavanie_info",
-    target: "router-view",
-    getTemplate: (targetElm) => {
-      document.getElementById(targetElm).innerHTML = document.getElementById("template-plavanie").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
-    }
-  },
-  {
-    hash: "bezky_info",
-    target: "router-view",
-    getTemplate: (targetElm) => {
-      document.getElementById(targetElm).innerHTML = document.getElementById("template-bezky").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
-    }
-  },
-  {
-    hash: "cennik",
+    path: "/cennik",
     target: "router-view",
     getTemplate: (targetElm) => {
       document.getElementById(targetElm).innerHTML = document.getElementById("template-cennik").innerHTML;
-      const sliderContainer = document.getElementById('slider-container');
-      if (sliderContainer) {
-        sliderContainer.style.display = 'none';
-      }
+      document.getElementById('slider-container').style.display = 'none';
     }
   }
 ];

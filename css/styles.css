@@ -45,7 +45,7 @@ body {
 }
 
 .btn_training:hover {
-    background-color: #0056b3;
+    background-color: rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
@@ -136,6 +136,7 @@ header nav ul li a:hover {
     flex-direction: column;
     list-style: none;
     padding: 0;
+    margin-top: 15px;
     margin-bottom: 10px;
     text-align: center;
     font-size: 24px;
@@ -161,11 +162,15 @@ header nav ul li a:hover {
 }
 
 #mobile-menu .close-button {
+    position: absolute;
     text-align: right;
+    right: 0;
+    top: 0;
     padding-right: 10px;
     font-size: 24px;
     color: white;
     cursor: pointer;
+
 }
 
 #mobile-menu .close-button:hover{
@@ -365,8 +370,8 @@ header nav ul li a:hover {
 
 .specialization-block h3 {
     font-size: 3rem;
-    -webkit-text-stroke: 2px #333;
-    color: white;
+    /*-webkit-text-stroke: 1px ;*/
+    color: black;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 

@@ -17,6 +17,7 @@ function router() {
     return;
   }
 
+  document.getElementById('router-view').innerHTML = '';
   route.getTemplate(route.target);
 }
 

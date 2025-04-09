@@ -1,6 +1,6 @@
 const routes = [
   {
-    path: "/index.html",
+    path: "/",
     target: "router-view",
     getTemplate: (targetElm) => {
       document.getElementById(targetElm).innerHTML = document.getElementById("template-welcome").innerHTML;

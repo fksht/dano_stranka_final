@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = e.target;
 
     // ROUTING
-    if (target.tagName === 'A' && target.getAttribute('href').startsWith('/')) {
+    /*if (target.tagName === 'A' && target.getAttribute('href').startsWith('/')) {*/
+    if (target.tagName === 'A' && target.getAttribute('href').startsWith('/') && !target.hash) {
       navigateTo(e);
     }
 

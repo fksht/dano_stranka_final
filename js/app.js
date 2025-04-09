@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ROUTING
     /*if (target.tagName === 'A' && target.getAttribute('href').startsWith('/')) {*/
-    if (target.tagName === 'A' && target.getAttribute('href').startsWith('') && !target.hash) {
+    if (target.tagName === 'A' && target.getAttribute('href').startsWith('/') && !target.hash) {
       navigateTo(e);
     }
 

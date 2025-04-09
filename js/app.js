@@ -7,7 +7,7 @@ function findComponentByPath(path, routes) {
 }
 
 function router() {
-  const path = window.location.pathname;
+  const path = window.location.pathname.replace(/^\/dano_stranka_final/, '').replace(/^\//, '') || '/';;
   const route = findComponentByPath(path, routes);
 
   if (!route) {

@@ -26,12 +26,6 @@ function navigateTo(event) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Obnovenie cesty po presmerovaní z 404.html
-  const redirect = sessionStorage.redirect;
-  delete sessionStorage.redirect;
-  if (redirect && redirect !== location.pathname) {
-    history.replaceState(null, null, redirect);
-  }
   router();
 
   document.body.addEventListener('click', (e) => {

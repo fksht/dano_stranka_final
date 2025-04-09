@@ -43,7 +43,7 @@ const routes = [
     path: "/triatlon_info",
     target: "router-view",
     getTemplate: (targetElm) => {
-        document.getElementById(targetElm).innerHTML = document.getElementById("template-triatlon").innerHTML;
+        document.getElementById(targetElm).innerHTML = document.getElementById("triatlon_info").innerHTML;
         document.getElementById('slider-container').style.display = 'none';
     }
   },

@@ -11,7 +11,9 @@ function router() {
   const route = findComponentByPath(path, routes);
 
   if (!route) {
-    document.getElementById('router-view').innerHTML = `<h2>Stránka "${path}" neexistuje</h2>`;
+    window.history.replaceState({}, '', '/');
+    //document.getElementById('router-view').innerHTML = `<h2>Stránka "${path}" neexistuje</h2>`;
+    document.getElementById('router-view').innerHTML = document.getElementById("template-welcome").innerHTML;
     return;
   }
 

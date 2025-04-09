@@ -17,7 +17,7 @@ function router() {
     return;
   }
 
-  document.getElementById('router-view').innerHTML = '';
+  /*document.getElementById('router-view').innerHTML = '';*/
   route.getTemplate(route.target);
 }
 
@@ -31,6 +31,19 @@ function navigateTo(event) {
 document.addEventListener('DOMContentLoaded', () => {
   router();
 
+  document.body.addEventListener('click', (e) => {
+    const target = e.target.closest('.specialization-block'); // Zachyť kliknutie na KARTU
+  
+    if (target) {
+      e.preventDefault();
+      const href = target.getAttribute('href');
+      
+      // Aktualizuj URL a spusti router
+      window.history.pushState({}, '', href);
+      router();
+    }
+  });
+  
   document.body.addEventListener('click', (e) => {
     const target = e.target;
 

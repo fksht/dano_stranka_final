@@ -705,26 +705,50 @@ footer nav ul li a:hover {
     }
 }
 
-
 /* Training Info Sections */
 .training-info {
     padding: 60px 0;
-    background: linear-gradient(to right, #f8f9fa 50%, #ffffff 50%);
+    background: linear-gradient(to right, #f8f9fa 50%, #ffffff 80%);
 }
 
 .training-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Rozdel na 2 stĺpce */
+    grid-template-columns: 1fr; /* Rozdel na 2 stĺpce */
     gap: 40px;
-    align-items: start;
-    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /*align-items: start;
+    text-align: left;*/
+}
+
+@media (min-width: 768px) {
+    .training-content {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
 }
 
 .training-content img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .training-content img {
+      max-height: 650px;
+      margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .training-content img {
+      height: 300px;
+      margin-bottom: 0;
+    }
 }
 
 .training-content h2 {
@@ -756,6 +780,8 @@ footer nav ul li a:hover {
 
 .training-h {
     font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 @media (min-width: 1200px) {
@@ -770,8 +796,10 @@ footer nav ul li a:hover {
     }
     
     .training-features li {
-      font-size: 1.1rem;
-      padding: 15px 0;
+        font-size: 1.1rem;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -808,7 +836,7 @@ footer nav ul li a:hover {
   
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 40px;
   }
@@ -819,9 +847,11 @@ footer nav ul li a:hover {
     background: #007bff;
     color: white;
     border-radius: 10px;
+    text-align: center;
   }
   
   .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
+    line-height: 1;
   }

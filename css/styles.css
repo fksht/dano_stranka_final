@@ -63,9 +63,15 @@ header .container {
     align-items: center;
 }
 
-header h1 {
+.header-h1 {
     margin: 0;
     font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
 
 .highlight-name {
@@ -602,7 +608,7 @@ footer nav ul li a:hover {
         text-align: center;
     }
 
-    header h1 {
+    .header-h1 {
         font-size: 28px;
     }
 
@@ -700,7 +706,7 @@ footer nav ul li a:hover {
         font-size: 12px;
     }
 
-    header h1 {
+    .header-h1 {
         font-size: 24px;
     }
 }
@@ -736,10 +742,11 @@ footer nav ul li a:hover {
     }
 
     .image-column {
+        margin-top: 50px;
         display: grid;
-        gap: 150px;
+        gap: 200px;
     }
-    
+
     .secondary-image {
         display: block;
         width: 100%;

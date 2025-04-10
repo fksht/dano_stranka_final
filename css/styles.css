@@ -707,7 +707,7 @@ footer nav ul li a:hover {
 
 /* Training Info Sections */
 .training-info {
-    padding: 60px 0;
+    padding: 10px 0;
 }
 
 .training-content {
@@ -721,10 +721,31 @@ footer nav ul li a:hover {
     text-align: left;*/
 }
 
+.image-column {
+    position: relative;
+}
+
+.secondary-image {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .training-content {
       grid-template-columns: 1fr 1fr;
       align-items: start;
+    }
+
+    .image-column {
+        display: grid;
+        gap: 150px;
+    }
+    
+    .secondary-image {
+        display: block;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
     }
 }
 
@@ -747,6 +768,10 @@ footer nav ul li a:hover {
     .training-content img {
       height: 300px;
       margin-bottom: 0;
+    }
+
+    .secondary-image {
+        height: 400px;
     }
 }
 
@@ -831,26 +856,83 @@ footer nav ul li a:hover {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin: 40px 0;
-  }
+}
   
-  .stats-grid {
+.stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-top: 40px;
-  }
+}
   
-  .stat-item {
+.stat-item {
     text-align: center;
     padding: 20px;
     background: #007bff;
     color: white;
     border-radius: 10px;
     text-align: center;
-  }
+}
   
-  .stat-number {
+.stat-number {
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 1;
-  }
+}
+
+
+.price-section {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.price-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.price-heading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.price-heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #444;
+    margin: 10px auto 0;
+}
+
+.price-text {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.price-subtext {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Responsive úpravy */
+@media (max-width: 768px) {
+    .price-section {
+        padding: 20px;
+    }
+    
+    .price-heading {
+        font-size: 1.5rem;
+    }
+}

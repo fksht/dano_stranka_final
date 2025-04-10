@@ -253,43 +253,17 @@
         </section>
     </template>
 
-    <!-- Triatlon Info Template -->
-<!--<template id="triatlon_info">
-    <section class="training-info">
-        <div class="container">
-            <h1 class="training-h">Triatlon</h1>
-            <div class="training-content">
-                <p>Tento krásny šport pozostávajúci z troch disciplín je na trénovanie náročný, avšak s múdrym a premysleným systémom sa dá hravo zvládnuť.</p>
-                <h3>Čo všetko obnáša moja príprava?</h3>
-                <ul class="training-features">
-                    <ol start="1">
-                        <li>Nastavenie reálnych a motivujúcich cieľov</li>
-                        <li>Funkčný tréningový plán</li>
-                        <li>Osobné a online tréningy plávania, bicyklovania a behu</li>
-                        <li>Analýza techniky všetkých troch disciplín</li>
-                        <li>Praktické skúsenosti šité na mieru pretekom</li>
-                        <li>Online konzultácie</li>
-                    </ol>
-                </ul>
-                
-                <p>Spolu vytvoríme stratégiu aby si bol/a pripravaný/á na preteky a zabezpečíme kompletnú prípravu aby si podal/a osobný rekord.</p>
-                <h3>a čo to vlastne stojí?</h3>
-                <p>Napíš mi a na cene sa dohodneme. ;)</p>
-                <p>Ak máš nejaké dalšie otázky neváhaj a kontaktuj ma</p>
-                <a href="/kontakt" class="btn_main">Kontaktovať pre viac info</a>
-            </div>
-        </div>
-    </section>
-</template>-->
-
 <template id="triatlon_info">
     <section class="training-info">
         <div class="container">
             <h1 class="training-h">Triatlon</h1>
             <div class="training-content">
-                <img src="photos/triatlon_info.JPG" alt="Triatlon tréning"> <!-- Nový obrázok -->
+                <div class="image-column">
+                    <img src="photos/triatlon_info.JPG" alt="Triatlon tréning">
+                    <img src="photos/triatlon_info_bike.jpg" alt="Doplnkový obrázok" class="secondary-image">
+                </div>
+
                 <div>
-            
                     <p class="lead-text">Tento krásny šport pozostávajúci z troch disciplín je na trénovanie náročný, avšak s múdrym a premysleným systémom sa dá hravo zvládnuť.</p>
             
                     <div class="highlight-box">
@@ -304,7 +278,7 @@
                         </ul>
                     </div>
             
-                    <!-- Pridané -->
+                
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-number">10+</div>
@@ -315,11 +289,17 @@
                             <div class="stat-label">trénovaných športovcov</div>
                         </div>
                     </div>
-                    <p>Spolu vytvoríme stratégiu aby si bol/a pripravaný/á na preteky a zabezpečíme kompletnú prípravu aby si podal/a osobný rekord.</p>
-                    <h3>a čo to vlastne stojí?</h3>
-                    <p>Napíš mi a na cene sa dohodneme. ;)</p>
-                    <p>Ak máš nejaké dalšie otázky neváhaj a kontaktuj ma</p>
-                    <a href="/kontakt" class="btn_main">Kontaktovať pre viac info</a>
+                    
+                    <div class="price-section">
+                        <div class="price-content">
+                            <h3 class="price-heading">A čo to vlastne stojí?</h3>
+                            <p class="price-text">Napíš mi a na cene sa dohodneme. ;)</p>
+                            <p class="price-subtext">Ak máš nejaké dalšie otázky, neváhaj ma kontaktovať</p>
+                            <div class="button-container">
+                                <a href="/kontakt" class="btn_main">Kontaktovať pre viac info</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -328,6 +308,165 @@
 
 <!-- Beh Info Template -->
 <template id="beh_info">
+    <section class="training-info">
+        <div class="container">
+            <h1 class="training-h">Bežecký tréning</h1>
+            <div class="training-content">
+                <div class="image-column">
+                    <img src="photos/beh_info_main.jpg" alt="Bežecký tréning">
+                    <img src="photos/beh_info_secondary.jpg" alt="Doplnkový beh" class="secondary-image">
+                </div>
+
+                <div>
+                    <p class="lead-text">Naučím ťa trénovať efektívnejšie a dosiahnuť tvoje ciele bez zbytočnej straty času, či už ide o zlepšenie kondície alebo výkonnostných časov.</p>
+
+                    <div class="highlight-box">
+                        <h3>Čo ti môžem ponúknuť?</h3>
+                        <ul class="training-features">
+                            <li>🏃‍♀️ Osobné tréningy zamerané na techniku behu</li>
+                            <li>📈 Online tréningové plány pre 5km, 10km alebo maratón</li>
+                            <li>📊 Komplexná analýza behu a prevencia zranení</li>
+                            <li>🎯 Individuálny prístup pre začiatočníkov aj pokročilých</li>
+                            <li>🏅 Stratégia pretekov a tréningové cykly</li>
+                            <li>💬 Pravidelné konzultácie a feedback</li>
+                        </ul>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">21+</div>
+                            <div class="stat-label">minút ušetrených na 10km</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">trénovaných bežcov</div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="price-content">
+                            <h3 class="price-heading">Ako začať?</h3>
+                            <p class="price-text">Cena sa odvíja od typu tréningového plánu a frekvencie konzultácií.</p>
+                            <p class="price-subtext">Spoločne nájdeme optimálne riešenie pre tvoje potreby</p>
+                            <div class="button-container">
+                                <a href="/kontakt" class="btn_main">Začať trénovať</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Plávanie Info Template -->
+<template id="plavanie_info">
+    <section class="training-info">
+        <div class="container">
+            <h1 class="training-h">Plavecký tréning</h1>
+            <div class="training-content">
+                <div class="image-column">
+                    <img src="photos/plavanie_info_main.jpg" alt="Plavecký tréning">
+                    <img src="photos/plavanie_info_secondary.jpg" alt="Technika plávania" class="secondary-image">
+                </div>
+
+                <div>
+                    <p class="lead-text">Plávanie je šport, ktorý vyžaduje osobný prístup a správnu metodiku. Ponúkam komplexnú prípravu pre všetky úrovne.</p>
+
+                    <div class="highlight-box">
+                        <h3>Hlavné benefity:</h3>
+                        <ul class="training-features">
+                            <li>🏊‍♂️ Výuka všetkých plaveckých štýlov od základov</li>
+                            <li>📹 Videoanalýza plaveckých pohybov</li>
+                            <li>🌊 Špeciálny tréning pre open water preteky</li>
+                            <li>💪 Zvyšovanie sily a vytrvalosti vo vode</li>
+                            <li>🔄 Korekcia technických chýb</li>
+                            <li>📅 Individuálne tréningové plány</li>
+                        </ul>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">30%</div>
+                            <div class="stat-label">zvýšenie efektivity záberu</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100m</div>
+                            <div class="stat-label">pod 1:20 min pre mojich plavcov</div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="price-content">
+                            <h3 class="price-heading">Prvý krok k lepšiemu plávaniu</h3>
+                            <p class="price-text">Cena závisí od formy tréningov (osobné/online) a ich frekvencie.</p>
+                            <p class="price-subtext">Kontaktuj ma pre individuálnu ponuku</p>
+                            <div class="button-container">
+                                <a href="/kontakt" class="btn_main">Objednať lekciu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<!-- Bežky Info Template -->
+<template id="bezky_info">
+    <section class="training-info">
+        <div class="container">
+            <h1 class="training-h">Bežecké lyžovanie</h1>
+            <div class="training-content">
+                <div class="image-column">
+                    <img src="photos/bezky_info_main.jpg" alt="Bežkársky tréning">
+                    <img src="photos/bezky_info_secondary.jpg" alt="Technika behu na lyžiach" class="secondary-image">
+                </div>
+
+                <div>
+                    <p class="lead-text">Jeden z najzdravších športov, ktorý perfektne dopĺňa iné vytrvalostné aktivity. Naučím ťa krásu pohybu na snehu!</p>
+
+                    <div class="highlight-box">
+                        <h3>Čo ťa čaká?</h3>
+                        <ul class="training-features">
+                            <li>⛷️ Výuka klasickej a skate techniky</li>
+                            <li>📊 Analýza pohybu pomocou videozáznamu</li>
+                            <li>❄️ Tréningy v teréne aj na upravených tratiach</li>
+                            <li>💪 Posilňovanie špecifických svalových skupín</li>
+                            <li>🏔️ Príprava na preteky a turistické výzvy</li>
+                            <li>👥 Skupinové aj individuálne lekcie</li>
+                        </ul>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">15km/h</div>
+                            <div class="stat-label">priemerné zlepšenie rýchlosti</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">odtrénovaných hodín</div>
+                        </div>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="price-content">
+                            <h3 class="price-heading">Začni už túto zimu!</h3>
+                            <p class="price-text">Ceny kurzov sa odvíjajú od ich dĺžky a počtu účastníkov.</p>
+                            <p class="price-subtext">Špeciálne ponuky pre skupiny</p>
+                            <div class="button-container">
+                                <a href="/kontakt" class="btn_main">Prihlásiť sa na kurz</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+
+<!--<template id="beh_info">
     <section class="training-info">
         <div class="container">
             <h2>Bežecký tréning</h2>
@@ -348,7 +487,7 @@
     </section>
 </template>
 
-<!-- Plávanie Info Template -->
+
 <template id="plavanie_info">
     <section class="training-info">
         <div class="container">
@@ -370,7 +509,6 @@
     </section>
 </template>
 
-<!-- Bežky Info Template -->
 <template id="bezky_info">
     <section class="training-info">
         <div class="container">
@@ -390,14 +528,10 @@
             </div>
         </div>
     </section>
-</template>
+</template>-->
 
     <script type="module" src="js/app.js"></script>
     <script type="module" src="js/routes.js"></script>
     <script type="module" src="js/photoslider.js"></script>
-
-    <!--<script type="module" src="/js/app.js"></script>
-    <script type="module" src="/js/routes.js"></script>
-    <script type="module" src="/js/photoslider.js"></script>-->
 </body>
 </html>

@@ -29,11 +29,18 @@
                 <ul>
                     <li><a href="/">Domov</a></li>
                     <li><a href="/o-mne">O mne</a></li>
-                    <li><a href="/sluzby">Služby</a></li>
+                    
+                    <li class="menu-parent"><a href="/sluzby" class="dropdown-toggle">Služby<span class="chevron"></span></a></li>
+                    <!--<ul class="hidden">
+                        <li class="menu-child"><a href="/triatlon_info">Triatlon</a></li>
+                        <li class="menu-child"><a href="/beh_info">Beh</a></li>
+                        <li class="menu-child"><a href="/plavanie_info">Plávanie</a></li>
+                        <li class="menu-child"><a href="/bezky_info">Bežky</a></li>
+                    </ul>-->
                     <li><a href="/kontakt">Kontakt</a></li>
                     <li><a href="/cennik">Cenník</a></li>
                 </ul>
-        
+            
                 <div class="social-media">
                     <a href="https://www.facebook.com/daniel.kraviansky?locale=sk_SK"><img src="photos/icons8-facebook.svg" alt="Facebook"></a>
                     <a href="https://www.instagram.com/danielkraviansky/"><img src="photos/icons8-instagram.svg" alt="Instagram"></a>
@@ -255,8 +262,12 @@
         </section>
     </template>
 
+    <!--#triatlon-info-->
     <template id="triatlon_info">
         <section class="training-info">
+            <div class="button-container" style="margin-left: 30px; text-align: left;">
+                <button onclick="window.history.back()" class="btn_main" style="background-color: white; color:#666;">< Späť</button>
+            </div>
             <div class="container">
                 <h1 class="training-h">Triatlon</h1>
                 <div class="training-content">
@@ -311,6 +322,9 @@
     <!-- Beh Info Template -->
     <template id="beh_info">
         <section class="training-info">
+            <div class="button-container" style="margin-left: 30px; text-align: left;">
+                <button onclick="window.history.back()" class="btn_main" style="background-color: white; color:#666;">< Späť</button>
+            </div>
             <div class="container">
                 <h1 class="training-h">Bežecký tréning</h1>
                 <div class="training-content">
@@ -364,6 +378,9 @@
     <!-- Plávanie Info Template -->
     <template id="plavanie_info">
         <section class="training-info">
+            <div class="button-container" style="margin-left: 30px; text-align: left;">
+                <button onclick="window.history.back()" class="btn_main" style="background-color: white; color:#666;">< Späť</button>
+            </div>
             <div class="container">
                 <h1 class="training-h">Plavecký tréning</h1>
                 <div class="training-content">
@@ -417,6 +434,9 @@
     <!-- Bežky Info Template -->
     <template id="bezky_info">
         <section class="training-info">
+            <div class="button-container" style="margin-left: 30px; text-align: left;">
+                <button onclick="window.history.back()" class="btn_main" style="background-color: white; color:#666;">< Späť</button>
+            </div>
             <div class="container">
                 <h1 class="training-h">Bežecké lyžovanie</h1>
                 <div class="training-content">

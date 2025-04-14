@@ -138,7 +138,7 @@ header nav ul li a:hover {
 }
   
 #mobile-menu ul {
-    display: flex;
+    display: block;
     flex-direction: column;
     list-style: none;
     padding: 0;
@@ -150,6 +150,10 @@ header nav ul li a:hover {
   
 #mobile-menu li {
     border-bottom: 1px solid #333;
+    min-height: 50px; /* Nastavíme minimálnu výšku */
+    display:block;
+    align-items: center;
+    position: relative;
 }
   
 #mobile-menu li a {
@@ -201,6 +205,66 @@ header nav ul li a:hover {
   
 #mobile-menu .social-icons a:hover img {
     transform: scale(1.2);
+}
+
+/* Pridaj tieto štýly do CSS */
+.menu-dropdown {
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+.dropdown-wrapper {
+    position: static !important; /* Umožňuje absolútne pozície pre podmenu */
+}
+
+.dropdown-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 15px !important; /* Fixný padding */
+    white-space: nowrap; /* Zabráni zalamovaniu */
+}
+
+.chevron {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    transition: transform 0.3s;
+    margin-left: 5px !important; /* Fixná medzera */
+}
+
+.menu-dropdown.active .chevron {
+    transform: rotate(180deg);
+}
+
+.menu-dropdown > .dropdown-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.submenu {
+    position: relative; /* Zmena na relatívnu pozíciu */
+    left: 0;
+    top: 0;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #333;
+    margin-left: 20px !important; /* Odsadenie od ľavého okraja */
+    margin-top: 10px !important;
+    margin-bottom: 15px !important; /* Posun ostatného obsahu nadol */
+    border-left: 2px solid #007bff; /* Dekoratívna čiara */
+    /*padding-left: 10px;*/
+}
+
+.menu-dropdown.active .submenu {
+    max-height: 500px; /* Uprav podľa potreby */
+    opacity: 1;
+    /*visibility: visible;*/
 }
 
 /* Hero Section */
@@ -629,6 +693,11 @@ footer nav ul li a:hover {
         font-size: 18px;
     }
 
+    .submenu {
+        background-color: rgba(0,0,0,0.1);
+        padding-left: 30px;
+    }
+
     .hero .container {
         flex-direction: column;
         text-align: center;
@@ -942,4 +1011,36 @@ footer nav ul li a:hover {
     .price-heading {
         font-size: 1.5rem;
     }
+}
+
+
+
+
+
+/* Rozbaľovacie menu */
+.menu-child {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+}
+
+.menu-parent.active ~ .menu-child {
+    max-height: 500px;
+    opacity: 1;
+    padding-left: 30px;
+}
+
+.menu-child a {
+    font-size: 0.9em !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.menu-child a:hover {
+    color: #ffce00 !important;
+}
+
+/* Šípka */
+.menu-parent.active .chevron {
+    transform: rotate(-225deg);
 }

@@ -7,10 +7,14 @@ body {
     color: #333;
 }
 
-body.no-scroll {
+.padding {
+    padding-top: 70px;
+}
+
+/*body.no-scroll {
     overflow: hidden;
     height: 100vh;
-}
+}*/
 
 .container {
     width: 95%;
@@ -59,7 +63,7 @@ header#page-header {
     background-color: #111;
     padding: 15px 0;
     color: white;
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 1000;
 }

@@ -359,6 +359,10 @@ nav.main-nav ul li a .arrow {
     nav.main-nav ul li a .arrow {
         transform: rotate(0deg); /* Šípka dole */
         border-color: white;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
     nav.main-nav ul li.dropdown.active > a > .arrow {
         transform: rotate(180deg); /* Šípka hore */

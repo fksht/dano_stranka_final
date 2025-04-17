@@ -275,8 +275,8 @@ nav.main-nav ul li a .arrow {
     /* Navigačné menu na mobile */
     nav.main-nav {
         position: fixed;
-        top: 66px; /* Začína pod headerom */
         right: 0;
+        top:70px;
         width: 280px; /* Trochu širšie mobilné menu */
         height: 100%; /* Výška zvyšku obrazovky */
         background-color: #222; /* Rovnaká ako submenu na desktope */
@@ -286,6 +286,49 @@ nav.main-nav ul li a .arrow {
         z-index: 1001;
         display: block; /* Vždy block, len transformované */
         box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+    }
+
+    /*@media (max-width: 500){
+        nav.main-nav{
+            top: 70px; 
+            height: calc(100vh - 70px);
+        }
+    }
+    @media (min-width: 500)and(max-width:768){
+        nav.main-nav{
+            top: 75px;  
+            height: calc(100vh - 75px);
+        }
+    }
+    @media (min-width: 769)and(max-width:900){
+        nav.main-nav{
+            top: 81px; 
+            height: calc(100vh - 81px);
+        }
+    }*/
+
+    /* Breakpoint 500px a menej */
+    @media (max-width: 500px) {
+        nav.main-nav {
+        top: 70px;
+        height: calc(100vh - 70px);
+        }
+    }
+
+    /* Breakpoint 501px - 768px */
+    @media (min-width: 501px) and (max-width: 768px) {
+        nav.main-nav {
+        top: 75px;
+        height: calc(100vh - 75px);
+        }
+    }
+
+    /* Breakpoint 769px - 900px */
+    @media (min-width: 769px) and (max-width: 900px) {
+        nav.main-nav {
+        top: 81px;
+        height: calc(100vh - 81px);
+        }
     }
 
     header.active nav.main-nav {
@@ -382,6 +425,8 @@ nav.main-nav ul li a .arrow {
         height: 28px;
     }
 }
+
+
 
 .menu-toggle {
     display: flex; /* always visible */

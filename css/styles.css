@@ -7,6 +7,11 @@ body {
     color: #333;
 }
 
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .container {
     width: 95%;
     margin: 0 auto;
@@ -50,11 +55,13 @@ body {
 }
 
 /* Header */
-header {
+header#page-header {
     background-color: #111;
     padding: 15px 0;
     color: white;
     position: relative;
+    width: 100%;
+    z-index: 1000;
 }
 
 header .container {
@@ -82,7 +89,7 @@ a {
     border-radius: 5px;
 }
 
-header nav ul {
+/*header nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -102,6 +109,274 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #ffce00;
+}*/
+
+/*Navigation General*/
+nav.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.main-nav ul li {
+    position: relative;
+}
+
+nav.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px; /* Vertikálny padding definuje výšku položky */
+    font-weight: bold; /* Veľkosť písma položiek */
+    transition: background-color 0.3s ease;
+}
+
+nav.main-nav ul li a:hover {
+    color: #ffce00; /* Tvoj hover */
+}
+
+/* Šípky pre dropdown */
+nav.main-nav ul li a .arrow {
+    margin-left: 8px;
+    font-size: 0.7em; /* Menšia šípka */
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Social Media na Desktope */
+.social-media {
+    display: flex; /* Zobraziť ikony */
+    align-items: center;
+    /*margin-left: 30px;*/
+ }
+ .social-media a {
+     margin-left: 15px;
+     line-height: 0;
+ }
+  .social-media img {
+     width: 24px;
+     height: 24px;
+     filter: brightness(0) invert(1);
+     transition: opacity 0.3s ease, transform 0.2s ease;
+ }
+  .social-media a:hover img {
+     opacity: 0.8;
+     transform: scale(1.1);
+ }
+
+@media (min-width: 901px) {
+    .menu-toggle {
+        display: none !important; /* Skryť hamburger */
+    }
+
+    nav.main-nav {
+        display: flex;
+        align-items: center; /* Zarovnaj ikony a menu vertikálne */
+    }
+
+    nav.main-nav ul {
+        display: flex; /* Položky vedľa seba */
+    }
+
+    /*nav.main-nav ul li {
+        float: left;
+        position: relative;
+    }*/
+
+    /*nav.main-nav > ul > li > a:hover {
+        background-color: #2b93e3;
+    }*/
+
+    /* Submenu Styling (Desktop) */
+    nav.main-nav ul .submenu {
+        display: none; /* Skryté štandardne */
+        position: absolute;
+        top: 100%; /* Presne pod rodičom */
+        left: 0;
+        background-color: #222; 
+        min-width: 180px; /* Alebo šírka rodiča? Video má pevnú */
+        z-index: 1001;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        /* Žiadny horný border vo videu */
+        list-style: none;
+        padding: 5px 0;
+        margin: 0;
+        border-radius: 0 0 5px 5px;
+    }
+
+    nav.main-nav ul .submenu li {
+        /*float: none; */
+        width: 100%;
+        /*border: none; */
+    }
+
+    nav.main-nav ul .submenu li a {
+        padding: 12px 20px;
+        font-size: 1em;
+        /*white-space: nowrap;*/
+        /* Svetlejší text v submenu */
+    }
+     /*nav.main-nav ul .submenu li a:hover {
+         background-color: #546e7b;
+         color: white;
+    }*/
+
+    /* Zobrazenie submenu pri hover nad LI rodičom */
+    nav.main-nav ul li.dropdown:hover > ul.submenu {
+        display: block;
+    }
+
+    .social-media {
+        margin-left: 25px;
+     }
+}
+
+/* === Mobile Navigation & Hamburger (max-width: 900px) === */
+@media (max-width: 900px) {
+    header .container {
+        padding: 0 15px;
+    }
+
+    /* Hamburger Menu Tlačidlo */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px; /* Šírka ikony */
+        height: 25px; /* Výška ikony */
+        cursor: pointer;
+        z-index: 1002;
+        position: relative;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px; /* Hrúbka čiary */
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out; /* Bounce efekt */
+        transform-origin: center;
+    }
+
+    /* Hamburger -> X transformácia (keď má header triedu 'active') */
+    header.active .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(10px,1px);
+    }
+    header.active .menu-toggle span:nth-child(2) {
+        transform: scale(0);
+        opacity: 0;
+    }
+    header.active .menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px,-1px);
+    }
+
+    /* Navigačné menu na mobile */
+    nav.main-nav {
+        position: fixed;
+        top: 66px; /* Začína pod headerom */
+        right: 0;
+        width: 280px; /* Trochu širšie mobilné menu */
+        height: 100%; /* Výška zvyšku obrazovky */
+        background-color: #222; /* Rovnaká ako submenu na desktope */
+        transform: translateX(100%); /* Štandardne skryté */
+        transition: transform 0.35s ease-in-out;
+        overflow-y: auto; /* Scroll ak treba */
+        z-index: 1001;
+        display: block; /* Vždy block, len transformované */
+        box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+    }
+
+    header.active nav.main-nav {
+        transform: translateX(0); /* Zobraziť menu */
+    }
+
+    nav.main-nav ul {
+        display: block;
+        padding-top: 0; /* Žiadny horný padding */
+    }
+
+    nav.main-nav ul li {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+        border-top: 1px solid #333; /* Horný oddeľovač */
+    }
+    nav.main-nav ul li:first-child {
+        border-top: none; /* Prvá položka nemá horný border */
+    }
+
+    nav.main-nav ul li a {
+        margin-left: 10px;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        justify-content: space-between; /* Šípka vpravo */
+        color: white; /* Svetlejší text */
+    }
+
+    /* Submenu na mobile */
+    nav.main-nav ul .submenu {
+        display: block;
+        position: static; /* Nie absolútne */
+        background-color: #222;
+        max-height: 0; /* Skryté */
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        width: 100%;
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav.main-nav ul li.dropdown.active > ul.submenu {
+        max-height: 500px; /* Zobraziť (dostatočná výška) */
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+     nav.main-nav ul .submenu li {
+        border-top: 1px solid #333;
+        
+     }
+      nav.main-nav ul .submenu li:first-child {
+        border-top: none;
+     }
+
+     nav.main-nav ul .submenu li a {
+        /*padding-left: 35px;*/ /* Odsadenie */
+        font-size: 1.1rem;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 30px;
+        /*background-color: transparent !important;*/ /* Zrušiť hover rodiča */
+    }
+
+
+    /* Šípky na mobile */
+    nav.main-nav ul li a .arrow {
+        transform: rotate(0deg); /* Šípka dole */
+        border-color: white;
+    }
+    nav.main-nav ul li.dropdown.active > a > .arrow {
+        transform: rotate(180deg); /* Šípka hore */
+        
+    }
+
+    /* Social Media na Mobile - v rámci nav */
+    .social-media {
+        justify-content: center; /* Centrovať ikony */
+        gap: 25px; /* Medzera */
+        padding: 20px 0;
+        /*margin-top: 15px;*/
+        border-top: 1px solid #333;
+    }
+    .social-media a img {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 .menu-toggle {
@@ -207,24 +482,6 @@ header nav ul li a:hover {
     transform: scale(1.2);
 }
 
-/* Pridaj tieto štýly do CSS */
-.menu-dropdown {
-    position: relative;
-    margin-bottom: 0 !important;
-}
-
-.dropdown-wrapper {
-    position: static !important; /* Umožňuje absolútne pozície pre podmenu */
-}
-
-.dropdown-toggle {
-    display: inline-flex !important;
-    align-items: center;
-    gap: 5px;
-    padding: 12px 15px !important; /* Fixný padding */
-    white-space: nowrap; /* Zabráni zalamovaniu */
-}
-
 .chevron {
     display: inline-block;
     width: 10px;
@@ -233,32 +490,11 @@ header nav ul li a:hover {
     border-bottom: 2px solid white;
     transform: rotate(-45deg);
     transition: transform 0.3s;
-    margin-left: 5px !important; /* Fixná medzera */
+    margin-left: 20px !important;
 }
 
 .menu-dropdown.active .chevron {
     transform: rotate(180deg);
-}
-
-.menu-dropdown > .dropdown-wrapper {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.submenu {
-    position: relative; /* Zmena na relatívnu pozíciu */
-    left: 0;
-    top: 0;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    background: #333;
-    margin-left: 20px !important; /* Odsadenie od ľavého okraja */
-    margin-top: 10px !important;
-    margin-bottom: 15px !important; /* Posun ostatného obsahu nadol */
-    border-left: 2px solid #007bff; /* Dekoratívna čiara */
-    /*padding-left: 10px;*/
 }
 
 .menu-dropdown.active .submenu {
@@ -695,7 +931,6 @@ footer nav ul li a:hover {
 
     .submenu {
         background-color: rgba(0,0,0,0.1);
-        padding-left: 30px;
     }
 
     .hero .container {
@@ -924,8 +1159,6 @@ footer nav ul li a:hover {
     }
 }
 
-
-
 .highlight-box {
     background: #ffffff;
     padding: 30px;
@@ -1013,34 +1246,21 @@ footer nav ul li a:hover {
     }
 }
 
-
-
-
-
 /* Rozbaľovacie menu */
 .menu-child {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    opacity: 0;
+    padding: 12px 20px;
+    border-bottom: 1px solid #444;
 }
 
 .menu-parent.active ~ .menu-child {
-    max-height: 500px;
+    max-height: 0;
     opacity: 1;
-    padding-left: 30px;
 }
 
-.menu-child a {
-    font-size: 0.9em !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+.menu-parent.active .submenu {
+    max-height: 500px;
 }
 
 .menu-child a:hover {
     color: #ffce00 !important;
-}
-
-/* Šípka */
-.menu-parent.active .chevron {
-    transform: rotate(-225deg);
 }

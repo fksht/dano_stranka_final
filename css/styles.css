@@ -11,6 +11,11 @@ body {
     padding-top: 70px;
 }
 
+main#router-view {
+    padding-top: 70px; /* Zodpovedá výške vášho headeru */
+    min-height: calc(100vh - 70px); /* Voliteľné - pre lepší vzhľad */
+}
+
 /*body.no-scroll {
     overflow: hidden;
     height: 100vh;
@@ -198,7 +203,7 @@ nav.main-nav ul li a .arrow {
         position: absolute;
         top: 100%; /* Presne pod rodičom */
         left: 0;
-        background-color: #222; 
+        background-color: #111; 
         min-width: 180px; /* Alebo šírka rodiča? Video má pevnú */
         z-index: 1001;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
@@ -213,7 +218,12 @@ nav.main-nav ul li a .arrow {
         /*float: none; */
         width: 100%;
         /*border: none; */
+        border-bottom: 1px solid #333;
     }
+    nav.main-nav ul .submenu li:last-child {
+        border-bottom: none;
+    }
+
 
     nav.main-nav ul .submenu li a {
         padding: 12px 20px;
